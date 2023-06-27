@@ -1,4 +1,4 @@
-const validateUser = async () => {
+const validateUser = async (email) => {
   try {
     const result = await fetch(
       `https://mp-wallet-app-api.herokuapp.com/users?email=${email}`
