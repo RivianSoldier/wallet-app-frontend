@@ -2,9 +2,12 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wallet App - Home</title>
     <link rel="stylesheet" href="../../../styles.css" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mobile.css" />
     <script src="index.js"></script>
   </head>
   <body>
@@ -16,7 +19,7 @@
           alt="Logo da carteira"
         />
         <div class="navbar-calendar-container">
-          <input type="date" id="select-date" class="input-calendar">
+          <input type="date" id="select-date" class="input-calendar" />
         </div>
         <div id="navbar-user-container" class="navbar-user-container">
           <div id="navbar-user-avatar" class="navbar-user-avatar"></div>
@@ -54,10 +57,17 @@
             id="input-title"
             required
           />
+          <label class="mt" for="input-category">Categoria</label>
+          <select
+            class="mt smaller"
+            name="input-category"
+            id="input-category"
+            required
+          ></select>
           <label class="mt" for="input-value">Valor</label>
           <input
             class="mt smaller"
-            placeholder="R$ 0,00 (Use valores negativos para uma despesa)"
+            placeholder="Despesas com valores negativos"
             type="number"
             step="any"
             name="input-value"
@@ -72,13 +82,6 @@
             id="input-date"
             required
           />
-          <label class="mt" for="input-category">Categoria</label>
-          <select
-            class="mt smaller"
-            name="input-category"
-            id="input-category"
-            required
-          ></select>
           <button type="submit" class="full-width mt larger">Adicionar</button>
         </form>
       </div>

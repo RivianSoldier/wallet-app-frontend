@@ -26,6 +26,7 @@ const renderfinancesList = (data) => {
 
   const titleText = document.createTextNode("Título");
   const titleElement = document.createElement("th");
+  titleElement.className = "left";
   titleElement.appendChild(titleText);
   tableHeader.appendChild(titleElement);
 
@@ -61,6 +62,7 @@ const renderfinancesList = (data) => {
 
     // title
     const titleTd = document.createElement("td");
+    titleTd.className = "left";
     const titleText = document.createTextNode(item.title);
     titleTd.appendChild(titleText);
     tableRow.appendChild(titleTd);
@@ -341,14 +343,14 @@ window.onload = () => {
 const onCreateFinanceRelease = async (target) => {
   try {
     const title = target[0].value;
-    const value = Number(target[1].value);
-    const date = target[2].value;
-    const category_id = Number(target[3].value);
+    const category_id = Number(target[1].value);
+    const value = Number(target[2].value);
+    const date = target[3].value;
     const result = await onCallAddFinance({
       title,
+      category_id,
       value,
       date,
-      category_id,
     });
 
     if (result.error) {
