@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This project is a finances management dashboard made with JavaScript, HTML and CSS. The objective is for the user to add and delete financial releases that are saved in an API, and inform the user of his balance of the month.
+This project is a finances management dashboard made with JavaScript, HTML and CSS. The objective is for the user to add and delete financial releases that are saved in an API, and inform the user of the balance of the month.
 
 ## Live Link
 
